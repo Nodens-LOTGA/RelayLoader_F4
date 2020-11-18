@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<VisualGDBProjectSettings2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Project xsi:type="com.visualgdb.project.embedded">
+    <CustomSourceDirectories>
+      <Directories />
+      <PathStyle>MinGWUnixSlash</PathStyle>
+      <LocalDirForAbsolutePaths>$(ToolchainDir)</LocalDirForAbsolutePaths>
+    </CustomSourceDirectories>
+    <AutoProgramSPIFFSPartition>true</AutoProgramSPIFFSPartition>
+    <MainSourceDirectory>$(ProjectDir)</MainSourceDirectory>
+    <ExportAdvancedBuildVariables>false</ExportAdvancedBuildVariables>
+    <MemoryListSource>DeviceDefinition</MemoryListSource>
+  </Project>
+  <Build xsi:type="com.visualgdb.build.cmake">
+    <BuildLogMode xsi:nil="true" />
+    <ToolchainID>
+      <ID>com.visualgdb.arm-eabi</ID>
+      <Version>
+        <GCC>9.3.1</GCC>
+        <GDB>9.2.0</GDB>
+        <Revision>2</Revision>
+      </Version>
+    </ToolchainID>
+    <RelativeSourceDirectory />
+    <ConfigurationType>DEBUG</ConfigurationType>
+    <BinaryDirectory>build/$(PlatformName)/$(ConfigurationName)</BinaryDirectory>
+    <MakeCommandTemplate>
+      <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
+      <RemoteHost>
+        <HostName>BuildMachine</HostName>
+        <Transport>BuiltinShortcut</Transport>
+      </RemoteHost>
+      <Command>$(VISUALGDB_DIR)/ninja.exe</Command>
+      <WorkingDirectory>$(BuildDir)</WorkingDirectory>
+      <BackgroundMode xsi:nil="true" />
+    </MakeCommandTemplate>
+    <CMakeCommand>
+      <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
+      <RemoteHost>
+        <HostName>BuildMachine</HostName>
+        <Transport>BuiltinShortcut</Transport>
+      </RemoteHost>
+      <Command>$(SYSPROGS_CMAKE_PATH)</Command>
+      <BackgroundMode xsi:nil="true" />
+    </CMakeCommand>
+    <UpdateSourcesInCMakeFile>true</UpdateSourcesInCMakeFile>
+    <ExportCompileCommands>false</ExportCompileCommands>
+    <DisableToolchainFile>false</DisableToolchainFile>
+    <ExtraModuleDirectories />
+    <ExtraConfigurationVariables />
+    <CMakeMakefileType>Ninja</CMakeMakefileType>
+    <DeployAsRoot>false</DeployAsRoot>
+    <CMakeCleanMode>RemoveBuildDirectory</CMakeCleanMode>
+    <UseCCache>false</UseCCache>
+    <ProjectModeSettings>
+      <ProjectItemSettings>
+        <GroupSourcesByTypes>true</GroupSourcesByTypes>
+        <GroupSourcesByPaths>true</GroupSourcesByPaths>
+        <GroupTargetsByPaths>true</GroupTargetsByPaths>
+        <FollowCMakeSourceGroups>false</FollowCMakeSourceGroups>
+        <AutoRefreshProject>true</AutoRefreshProject>
+        <AlwaysConsiderOutdated>false</AlwaysConsiderOutdated>
+        <SortTargetsByName>true</SortTargetsByName>
+        <RedundantTargetMode>HideOuterProjectTargets</RedundantTargetMode>
+        <SortSourcesByName>true</SortSourcesByName>
+        <BuildAllTargetsInSubdir>false</BuildAllTargetsInSubdir>
+        <FoldSingleItemPathLevels>true</FoldSingleItemPathLevels>
+      </ProjectItemSettings>
+      <TargetSpecificSettings>
+        <CMakeTargetSpecificSettings>
+          <TargetID>RelayLoader_F4</TargetID>
+          <Debug />
+          <Deployment>
+            <Mode>Auto</Mode>
+            <DeployIfNotSpecificallyReferenced>false</DeployIfNotSpecificallyReferenced>
+            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
+          </Deployment>
+          <RootVirtualSourceFolder>
+            <Subfolders>
+              <VirtualSourceFolder>
+                <Name>CORE</Name>
+                <Subfolders />
+                <Files>
+                  <string>${RelayLoader_F4_LOCATION}/Drivers/CMSIS/Include/core_cm4.h</string>
+                </Files>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Startup</Name>
+                <Subfolders />
+                <Files>
+                  <string>${RelayLoader_F4_LOCATION}/Core/Src/system_stm32f4xx.c</string>
+                  <string>${RelayLoader_F4_LOCATION}/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h</string>
+                  <string>${RelayLoader_F4_LOCATION}/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h</string>
+                </Files>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>STM32Cube HAL</Name>
+                <Subfolders>
+                  <VirtualSourceFolder>
+                    <Name>COMMON</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                  <VirtualSourceFolder>
+                    <Name>RCC</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                  <VirtualSourceFolder>
+                    <Name>CORTEX</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                  <VirtualSourceFolder>
+                    <Name>EXTI</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                  <VirtualSourceFolder>
+                    <Name>DMA</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                  <VirtualSourceFolder>
+                    <Name>TIM</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                  <VirtualSourceFolder>
+                    <Name>PWR</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                  <VirtualSourceFolder>
+                    <Name>SPI</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                  <VirtualSourceFolder>
+                    <Name>FLASH</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                  <VirtualSourceFolder>
+                    <Name>GPIO</Name>
+                    <Subfolders />
+                    <Files>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h</string>
+                      <string>${RelayLoader_F4_LOCATION}/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h</string>
+                    </Files>
+                  </VirtualSourceFolder>
+                </Subfolders>
+                <Files />
+              </VirtualSourceFolder>
+            </Subfolders>
+            <Files>
+              <string>${RelayLoader_F4_LOCATION}/Core/Src/gpio.c</string>
+              <string>${RelayLoader_F4_LOCATION}/Core/Src/spi.c</string>
+              <string>${RelayLoader_F4_LOCATION}/Core/Src/stm32f4xx_it.c</string>
+              <string>${RelayLoader_F4_LOCATION}/Core/Src/stm32f4xx_hal_msp.c</string>
+              <string>${RelayLoader_F4_LOCATION}/Core/Src/main.c</string>
+              <string>${RelayLoader_F4_LOCATION}/Core/Inc/gpio.h</string>
+              <string>${RelayLoader_F4_LOCATION}/Core/Inc/spi.h</string>
+              <string>${RelayLoader_F4_LOCATION}/Core/Inc/stm32f4xx_it.h</string>
+              <string>${RelayLoader_F4_LOCATION}/Core/Inc/stm32f4xx_hal_conf.h</string>
+              <string>${RelayLoader_F4_LOCATION}/Core/Inc/main.h</string>
+            </Files>
+          </RootVirtualSourceFolder>
+          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
+          <ResourceDirectories />
+        </CMakeTargetSpecificSettings>
+      </TargetSpecificSettings>
+      <SetLDLibraryPathFromDependentArtifacts>true</SetLDLibraryPathFromDependentArtifacts>
+      <ProjectGUID>a79fda5d-12e6-4e0e-95e2-474a7f7d76ff</ProjectGUID>
+      <VirtualFolders />
+      <ConfigurationNameCase>Upper</ConfigurationNameCase>
+      <DefaultHeaderDiscoveryMode>None</DefaultHeaderDiscoveryMode>
+      <EnableFastUpToDateCheck>true</EnableFastUpToDateCheck>
+    </ProjectModeSettings>
+  </Build>
+  <CustomBuild>
+    <PreSyncActions />
+    <PreBuildActions />
+    <PostBuildActions />
+    <PreCleanActions />
+    <PostCleanActions />
+  </CustomBuild>
+  <CustomDebug>
+    <PreDebugActions />
+    <PostDebugActions />
+    <DebugStopActions />
+    <BreakMode>Default</BreakMode>
+  </CustomDebug>
+  <CustomShortcuts>
+    <Shortcuts />
+    <ShowMessageAfterExecuting>true</ShowMessageAfterExecuting>
+  </CustomShortcuts>
+  <UserDefinedVariables />
+  <ImportedPropertySheets />
+  <CodeSense>
+    <Enabled>Unknown</Enabled>
+    <ExtraSettings>
+      <HideErrorsInSystemHeaders>true</HideErrorsInSystemHeaders>
+      <SupportLightweightReferenceAnalysis>true</SupportLightweightReferenceAnalysis>
+      <CheckForClangFormatFiles>true</CheckForClangFormatFiles>
+      <FormattingEngine xsi:nil="true" />
+    </ExtraSettings>
+    <CodeAnalyzerSettings>
+      <Enabled>false</Enabled>
+    </CodeAnalyzerSettings>
+  </CodeSense>
+  <Configurations />
+  <ProgramArgumentsSuggestions />
+  <Debug xsi:type="com.visualgdb.debug.embedded">
+    <AdditionalStartupCommands>
+      <GDBPreStartupCommands />
+      <GDBStartupCommands>
+        <string>set $sp=&amp;_estack</string>
+      </GDBStartupCommands>
+      <GDBFinalizationCommands />
+    </AdditionalStartupCommands>
+    <AdditionalGDBSettings>
+      <Features>
+        <DisableAutoDetection>false</DisableAutoDetection>
+        <UseFrameParameter>false</UseFrameParameter>
+        <SimpleValuesFlagSupported>false</SimpleValuesFlagSupported>
+        <ListLocalsSupported>false</ListLocalsSupported>
+        <ByteLevelMemoryCommandsAvailable>false</ByteLevelMemoryCommandsAvailable>
+        <ThreadInfoSupported>false</ThreadInfoSupported>
+        <PendingBreakpointsSupported>false</PendingBreakpointsSupported>
+        <SupportTargetCommand>false</SupportTargetCommand>
+        <ReliableBreakpointNotifications>false</ReliableBreakpointNotifications>
+      </Features>
+      <EnableSmartStepping>false</EnableSmartStepping>
+      <FilterSpuriousStoppedNotifications>false</FilterSpuriousStoppedNotifications>
+      <ForceSingleThreadedMode>false</ForceSingleThreadedMode>
+      <UseAppleExtensions>false</UseAppleExtensions>
+      <CanAcceptCommandsWhileRunning>false</CanAcceptCommandsWhileRunning>
+      <MakeLogFile>false</MakeLogFile>
+      <IgnoreModuleEventsWhileStepping>true</IgnoreModuleEventsWhileStepping>
+      <UseRelativePathsOnly>false</UseRelativePathsOnly>
+      <ExitAction>None</ExitAction>
+      <DisableDisassembly>false</DisableDisassembly>
+      <ExamineMemoryWithXCommand>false</ExamineMemoryWithXCommand>
+      <StepIntoNewInstanceEntry>main</StepIntoNewInstanceEntry>
+      <ExamineRegistersInRawFormat>true</ExamineRegistersInRawFormat>
+      <DisableSignals>false</DisableSignals>
+      <EnableAsyncExecutionMode>false</EnableAsyncExecutionMode>
+      <EnableNonStopMode>false</EnableNonStopMode>
+      <MaxBreakpointLimit>0</MaxBreakpointLimit>
+      <EnableVerboseMode>true</EnableVerboseMode>
+    </AdditionalGDBSettings>
+    <DebugMethod>
+      <ID>com.sysprogs.arm.openocd</ID>
+      <InterfaceID>stlink-v2</InterfaceID>
+      <InterfaceSerialNumber>6&amp;1D2F3AEB&amp;0&amp;1</InterfaceSerialNumber>
+      <Configuration xsi:type="com.visualgdb.edp.openocd.settings">
+        <CommandLine>-f interface/stlink-v2.cfg -f target/stm32f4x.cfg -c init -c "reset init"</CommandLine>
+        <ExtraParameters>
+          <Frequency xsi:nil="true" />
+          <BoostedFrequency xsi:nil="true" />
+          <ConnectUnderReset>false</ConnectUnderReset>
+        </ExtraParameters>
+        <LoadProgressGUIThreshold>131072</LoadProgressGUIThreshold>
+        <ProgramMode>Enabled</ProgramMode>
+        <StartupCommands>
+          <string>set remotetimeout 60</string>
+          <string>target remote :$$SYS:GDB_PORT$$</string>
+          <string>mon halt</string>
+          <string>mon reset init</string>
+          <string>load</string>
+        </StartupCommands>
+        <ProgramFLASHUsingExternalTool>false</ProgramFLASHUsingExternalTool>
+        <PreferredGDBPort>0</PreferredGDBPort>
+        <PreferredTelnetPort>0</PreferredTelnetPort>
+        <AlwaysPassSerialNumber>false</AlwaysPassSerialNumber>
+        <SelectedCoreIndex xsi:nil="true" />
+      </Configuration>
+    </DebugMethod>
+    <AutoDetectRTOS>true</AutoDetectRTOS>
+    <SemihostingSupport>Auto</SemihostingSupport>
+    <SemihostingPollingDelay>0</SemihostingPollingDelay>
+    <StepIntoEntryPoint>false</StepIntoEntryPoint>
+    <ReloadFirmwareOnReset>false</ReloadFirmwareOnReset>
+    <ValidateEndOfStackAddress>true</ValidateEndOfStackAddress>
+    <StopAtEntryPoint>false</StopAtEntryPoint>
+    <EnableVirtualHalts>false</EnableVirtualHalts>
+    <DynamicAnalysisSettings />
+    <EndOfStackSymbol>_estack</EndOfStackSymbol>
+    <TimestampProviderTicksPerSecond>0</TimestampProviderTicksPerSecond>
+    <KeepConsoleAfterExit>false</KeepConsoleAfterExit>
+    <UnusedStackFillPattern xsi:nil="true" />
+    <CheckInterfaceDrivers>true</CheckInterfaceDrivers>
+  </Debug>
+</VisualGDBProjectSettings2>
